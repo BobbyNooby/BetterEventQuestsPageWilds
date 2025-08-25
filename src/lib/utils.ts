@@ -28,7 +28,8 @@ export const getDateFromString = (
 	return new Date(ms); // always a UTC instant (Z)
 };
 
-export const parseISOToCurrentTimezone = (iso: string): string => {
+export const parseISOToCurrentTimezone = (iso: string | null | undefined): string => {
+	if (!iso) return 'N/A';
 	const d = new Date(iso);
 
 	const day = String(d.getDate()).padStart(2, '0');
