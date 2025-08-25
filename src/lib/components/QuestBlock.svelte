@@ -1,9 +1,8 @@
 <script lang="ts">
-	import { theme } from '$lib/config/colors';
 	import type { Quest } from '$lib/types';
 	import { parseISOToCurrentTimezone } from '$lib/utils';
+	import ChronologyBox from './ChronologyBox.svelte';
 	import DifficultyRing from './DifficultyRing.svelte';
-	import TimeLeft from './TimeLeft.svelte';
 
 	let { quest }: { quest: Quest } = $props();
 
@@ -17,18 +16,11 @@
 		return 'current';
 	})();
 
-	const labelMap = {
-		past: { text: 'Ended', classes: 'bg-purple-600 text-white border-purple-800' },
-		current: { text: 'Ends In', classes: 'bg-red-600 text-white border-red-700' },
-		future: { text: 'Starts In', classes: 'bg-yellow-400 text-black border-yellow-500' },
-		permanent: { text: 'Permanent', classes: 'bg-green-600 text-white border-green-800' }
-	} as const;
-
 	const diff = Number((quest.difficulty ?? '').toString().replace(/[^\d]/g, '')) || 0;
 </script>
 
 <div
-	class="mx-auto w-full max-w-6xl rounded-xl border-4 border-white bg-black shadow-md shadow-white ring-1"
+	class="mx-auto w-full max-w-6xl rounded-xl border-4 border-white bg-black shadow-md ring-1 shadow-white"
 >
 	<!-- Grid:
 	     mobile: 1 col
@@ -39,19 +31,9 @@
 		<div
 			class="order-1 flex h-fit w-full flex-col items-start gap-1 md:order-1 md:col-span-2 md:items-center"
 		>
-			<!-- Colored label box -->
-			<span
-				class={`w-full rounded-lg border-4 px-2.5 py-1 text-center text-lg font-semibold uppercase tracking-wide ${labelMap[chronology].classes}`}
-				aria-live="polite"
-			>
-				{labelMap[chronology].text}
-			</span>
-
-			<!-- Timer BELOW the label, hidden for permanent -->
-			{#if chronology !== 'permanent'}
-				<div class="mt-1 font-mono text-xl tabular-nums text-gray-200">
-					<TimeLeft {quest} />
-				</div>
+			<ChronologyBox {quest} {chronology} />
+			{#if chronology == 'future'}
+				<ChronologyBox {quest} chronology={'current'} />
 			{/if}
 		</div>
 
@@ -75,7 +57,7 @@
 		<!-- Summary + title + ring -->
 		<section class="order-3 md:order-2 md:col-span-5">
 			<header class="mb-3 flex items-center gap-3">
-				<h1 class="flex-1 text-lg font-semibold leading-tight text-white md:text-xl">
+				<h1 class="flex-1 text-lg leading-tight font-semibold text-white md:text-xl">
 					{quest.title}
 				</h1>
 

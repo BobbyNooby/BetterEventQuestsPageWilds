@@ -1,12 +1,10 @@
 <script lang="ts">
 	import { timeDifference } from '$lib/timeDifference';
-	import type { Quest } from '$lib/types';
-	import { onMount } from 'svelte';
 
-	let { quest }: { quest: Quest } = $props();
+	let { start, end }: { start: Date | null; end: Date | null } = $props();
 
-	// turn the {days,hours,minutes,seconds} into a string
-	const parseTimeDiffToString = (timeDiff: {
+	// Format {days,hours,minutes,seconds} into a string
+	const formatDiff = (timeDiff: {
 		days: number;
 		hours: number;
 		minutes: number;
@@ -17,43 +15,53 @@
 
 		if (days > 0) return `${days} Day${days > 1 ? 's' : ''}`;
 
-		// pad to 2-digit for clock-style
+		// clock-style 2-digit
 		const pad = (n: number) => String(Math.abs(n)).padStart(2, '0');
 		return `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`;
 	};
 
-	// compute only formatted diff string
-	const computeTimeDiffString = (start: Date | null, end: Date | null): string => {
+	const compute = (start: Date | null, end: Date | null): string => {
 		const now = new Date();
 
-		if (!start || !end) {
-			return 'Permanent';
-		}
+		if (!start || !end) return 'Permanent';
 
-		if (now < start) {
-			return parseTimeDiffToString(timeDifference(now, start)); // until it starts
-		}
+		if (now < start) return formatDiff(timeDifference(now, start)); // until it starts
+		if (now <= end) return formatDiff(timeDifference(now, end)); // until it ends
 
-		if (now >= start && now <= end) {
-			return parseTimeDiffToString(timeDifference(now, end)); // until it ends
-		}
-
-		return `${parseTimeDiffToString(timeDifference(end, now))} ago`; // time since ended
+		return `${formatDiff(timeDifference(end, now))} ago`; // since ended
 	};
 
-	const startTime = typeof quest.startISOUTC === 'string' ? new Date(quest.startISOUTC) : null;
-	const endTime = typeof quest.endISOUTC === 'string' ? new Date(quest.endISOUTC) : null;
+	let timeDiffString = $state(compute(start, end));
+	let timer: ReturnType<typeof setInterval> | null = null;
 
-	let timeDiffString = $state(computeTimeDiffString(startTime, endTime));
-
-	onMount(() => {
-		if (startTime && endTime) {
-			const interval = setInterval(() => {
-				timeDiffString = computeTimeDiffString(startTime, endTime);
-			}, 1000);
-			return () => clearInterval(interval);
+	// Recompute and (re)start interval whenever start/end change.
+	$effect(() => {
+		// clear any previous timer
+		if (timer) {
+			clearInterval(timer);
+			timer = null;
 		}
+
+		// If either is null, show Permanent and stop here
+		if (!start || !end) {
+			timeDiffString = 'Permanent';
+			return;
+		}
+
+		// Initial compute + ticking clock
+		timeDiffString = compute(start, end);
+		timer = setInterval(() => {
+			timeDiffString = compute(start, end);
+		}, 1000);
+
+		// cleanup if start/end change or component unmounts
+		return () => {
+			if (timer) {
+				clearInterval(timer);
+				timer = null;
+			}
+		};
 	});
 </script>
 
-<p class="">{timeDiffString}</p>
+<p>{timeDiffString}</p>
