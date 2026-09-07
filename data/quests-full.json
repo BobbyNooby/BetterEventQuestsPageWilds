@@ -1,0 +1,1168 @@
+{
+	"timeDiff": "0",
+	"tabs": [
+		{
+			"id": "tab0",
+			"rangeText": "09.02.2026 〜 09.08.2026<br>",
+			"label": "This week",
+			"questCount": 1,
+			"quests": [
+				{
+					"rowClasses": ["t1"],
+					"image": "https://info.monsterhunter.com/wilds/event-quest/thumbnail/mst-quest/March2025/Suwdskv0t3sCY62hDb25.jpg",
+					"difficulty": "4★",
+					"onlineBadge": "online",
+					"labels": [],
+					"title": "Peak Nerscylla",
+					"eventTimeText": "09-02 00:00 〜 09-08 23:59",
+					"summary": "An event quest for gathering Fluffy Eggs that you can use as additional ingredients when cooking on the BBQ Grill!",
+					"buttons": [],
+					"colabLink": null,
+					"overview": {
+						"Locales": "Iceshard Cliffs",
+						"Conditions": "HR 9 or higher",
+						"Completion Conditions": "Hunt the Nerscylla",
+						"Start Date and Time": "09.02.2026 00:00",
+						"End Date and Time": "09.08.2026 23:59"
+					}
+				}
+			]
+		},
+		{
+			"id": "tab1",
+			"rangeText": "09.09.2026 〜 09.15.2026<br>",
+			"label": "Next week",
+			"questCount": 1,
+			"quests": [
+				{
+					"rowClasses": ["t2"],
+					"image": "https://info.monsterhunter.com/wilds/event-quest/thumbnail/mst-quest/March2025/Vdweo3pi1grYMOpD1Uxo.jpg",
+					"difficulty": "5★",
+					"onlineBadge": "online",
+					"labels": [],
+					"title": "Where You'd Least Expect",
+					"eventTimeText": "09-09 00:00 〜 09-15 23:59",
+					"summary": "An event quest for gathering Sild Garlic that you can use as additional ingredients when cooking on the BBQ Grill!",
+					"buttons": [],
+					"colabLink": null,
+					"overview": {
+						"Locales": "Ruins of Wyveria",
+						"Conditions": "HR 21 or higher",
+						"Completion Conditions": "Hunt the Xu Wu",
+						"Start Date and Time": "09.09.2026 00:00",
+						"End Date and Time": "09.15.2026 23:59"
+					}
+				}
+			]
+		},
+		{
+			"id": "tab2",
+			"rangeText": "09.16.2026 〜 09.22.2026<br>",
+			"label": "The week after next",
+			"questCount": 1,
+			"quests": [
+				{
+					"rowClasses": ["t3"],
+					"image": "https://info.monsterhunter.com/wilds/event-quest/thumbnail/mst-quest/April2025/ytRH31qnoJIMuiin3viY.jpg",
+					"difficulty": "6★",
+					"onlineBadge": "online",
+					"labels": [],
+					"title": "Gravios Blockade",
+					"eventTimeText": "09-16 00:00 〜 11-03 23:59",
+					"summary": "An event quest for gathering additional ingredients from various locations to use when cooking on the BBQ Grill!",
+					"buttons": [],
+					"colabLink": null,
+					"overview": {
+						"Locales": "Wounded Hollow",
+						"Conditions": "HR 31 or higher",
+						"Completion Conditions": "Hunt the Tempered Gravios",
+						"Start Date and Time": "09.16.2026 00:00",
+						"End Date and Time": "11.03.2026 23:59"
+					}
+				}
+			]
+		}
+	],
+	"permanent": [
+		{
+			"rowClasses": ["t1", "t2", "t3"],
+			"image": "https://info.monsterhunter.com/wilds/event-quest/thumbnail/mst-quest/February2026/LbiIEc8vX5mKZOx7sYPE.jpg",
+			"difficulty": "10★",
+			"onlineBadge": null,
+			"labels": [],
+			"title": "Special Assignment: Slay Gogmazios",
+			"eventTimeText": "03-12 00:00 〜 01-01 00:00",
+			"summary": "A fierce 10★ Gogmazios has been added to the game! Its fierce attacks present an exhilaratingly formidable challenge!Note: No Support Hunters will appear on the upper level in this version of the fight.",
+			"buttons": [],
+			"colabLink": null,
+			"overview": {
+				"Locales": "Forgotten Machineworks",
+				"Conditions": "HR 100 or higher",
+				"Completion Conditions": "Slay the Gogmazios",
+				"Start Date and Time": "03.12.2026 00:00"
+			}
+		},
+		{
+			"rowClasses": ["t1", "t2", "t3"],
+			"image": "https://info.monsterhunter.com/wilds/event-quest/thumbnail/mst-quest/February2026/Y4bdAkgP1tdTF0fckCdY.jpg",
+			"difficulty": "10★",
+			"onlineBadge": null,
+			"labels": [],
+			"title": "Freedom from Solitude",
+			"eventTimeText": "02-18 00:00 〜 01-01 00:00",
+			"summary": "The powerful Arch-Tempered Arkveld now roams the Ruins of Wyveria.Earn special rewards and forge the Arkveld γ armor set!",
+			"buttons": [],
+			"colabLink": null,
+			"overview": {
+				"Locales": "Ruins of Wyveria",
+				"Conditions": "HR 100 or higher",
+				"Completion Conditions": "Hunt the Arch-tempered Arkveld",
+				"Start Date and Time": "02.18.2026 00:00"
+			}
+		},
+		{
+			"rowClasses": ["t1", "t2", "t3"],
+			"image": "https://info.monsterhunter.com/wilds/event-quest/thumbnail/mst-quest/February2026/5haDu9FqsVSAyqVFRlcK.jpg",
+			"difficulty": "10★",
+			"onlineBadge": null,
+			"labels": [],
+			"title": "Just What the Doctor Ordered",
+			"eventTimeText": "02-28 00:00 〜 01-01 00:00",
+			"summary": "As the least-hunted monster in Monster Hunter Wilds, Rompopolo has vengefully resurfaced as a 10★-equivalent monster!Collect special materials to forge the Rompomask α!Also, completing the quest will award you special pendants. (A total of 6 different pendants are available.)",
+			"buttons": [],
+			"colabLink": null,
+			"overview": {
+				"Locales": "Oilwell Basin",
+				"Conditions": "HR 100 or higher",
+				"Completion Conditions": "Hunt the Tempered Rompopolo",
+				"Start Date and Time": "02.28.2026 00:00"
+			}
+		},
+		{
+			"rowClasses": ["t1", "t2", "t3"],
+			"image": "https://info.monsterhunter.com/wilds/event-quest/thumbnail/mst-quest/February2026/fAPbGZ6T1qGf8jsD0raI.jpg",
+			"difficulty": "10★",
+			"onlineBadge": null,
+			"labels": [],
+			"title": "Ruler of the Desert Kingdom",
+			"eventTimeText": "02-18 00:00 〜 01-01 00:00",
+			"summary": "A 10★ Arch-tempered Rey Dau has been added to the game.You'll have a chance to earn Battle-tempered Emblems, used to reinforce Gogma Artian Weapons, and be rewarded a Timeworn Charm.",
+			"buttons": [],
+			"colabLink": null,
+			"overview": {
+				"Locales": "Windward Plains",
+				"Conditions": "HR 100 or higher",
+				"Completion Conditions": "Hunt the Arch-tempered Rey Dau",
+				"Start Date and Time": "02.18.2026 00:00"
+			}
+		},
+		{
+			"rowClasses": ["t1", "t2", "t3"],
+			"image": "https://info.monsterhunter.com/wilds/event-quest/thumbnail/mst-quest/February2026/jqFGAHntxFEU8V3BQsmP.jpg",
+			"difficulty": "10★",
+			"onlineBadge": null,
+			"labels": [],
+			"title": "Summons from the Land Beyond",
+			"eventTimeText": "02-18 00:00 〜 01-01 00:00",
+			"summary": "A 10★ Arch-tempered Uth Duna has been added to the game.You'll have a chance to earn Battle-tempered Emblems, used to reinforce Gogma Artian Weapons, and be rewarded a Timeworn Charm.",
+			"buttons": [],
+			"colabLink": null,
+			"overview": {
+				"Locales": "Scarlet Forest",
+				"Conditions": "HR 100 or higher",
+				"Completion Conditions": "Hunt the Arch-tempered Uth Duna",
+				"Start Date and Time": "02.18.2026 00:00"
+			}
+		},
+		{
+			"rowClasses": ["t1", "t2", "t3"],
+			"image": "https://info.monsterhunter.com/wilds/event-quest/thumbnail/mst-quest/February2026/NL1BMVwkX2PVokdLeyfR.jpg",
+			"difficulty": "10★",
+			"onlineBadge": null,
+			"labels": [],
+			"title": "Scion of the Dark Cradle",
+			"eventTimeText": "02-18 00:00 〜 01-01 00:00",
+			"summary": "A 10★ Arch-tempered Nu Udra has been added to the game.You'll have a chance to earn Battle-tempered Emblems, used to reinforce Gogma Artian Weapons, and be rewarded a Timeworn Charm.",
+			"buttons": [],
+			"colabLink": null,
+			"overview": {
+				"Locales": "Oilwell Basin",
+				"Conditions": "HR 100 or higher",
+				"Completion Conditions": "Hunt the Arch-tempered Nu Udra",
+				"Start Date and Time": "02.18.2026 00:00"
+			}
+		},
+		{
+			"rowClasses": ["t1", "t2", "t3"],
+			"image": "https://info.monsterhunter.com/wilds/event-quest/thumbnail/mst-quest/February2026/tSbHh2rMx0h1gMk5p3oY.jpg",
+			"difficulty": "10★",
+			"onlineBadge": null,
+			"labels": [],
+			"title": "Frozen Knells of the East",
+			"eventTimeText": "02-18 00:00 〜 01-01 00:00",
+			"summary": "A 10★ Arch-tempered Jin Dahaad has been added to the game.You'll be rewarded with Battle-tempered Emblems, used to reinforce Gogma Artian Weapons, and have a chance to earn Timeworn Charms.",
+			"buttons": [],
+			"colabLink": null,
+			"overview": {
+				"Locales": "Rimechain Peak",
+				"Conditions": "HR 100 or higher",
+				"Completion Conditions": "Slay the Arch-tempered Jin Dahaad",
+				"Start Date and Time": "02.18.2026 00:00"
+			}
+		},
+		{
+			"rowClasses": ["t1", "t2", "t3"],
+			"image": "https://info.monsterhunter.com/wilds/event-quest/thumbnail/mst-quest/February2026/CXNB5Rij08UYtp6T1Nas.jpg",
+			"difficulty": "10★",
+			"onlineBadge": null,
+			"labels": [],
+			"title": "Hope of the Ancients",
+			"eventTimeText": "03-04 00:00 〜 01-01 00:00",
+			"summary": "A fierce 10★ Zoh Shia has been added to the game.You'll have a chance to earn Battle-tempered Emblems, used to reinforce Gogma Artian Weapons, and be rewarded a Timeworn Charm.",
+			"buttons": [],
+			"colabLink": null,
+			"overview": {
+				"Locales": "Dragontorch Shrine",
+				"Conditions": "HR 100 or higher",
+				"Completion Conditions": "Slay the Zoh Shia",
+				"Start Date and Time": "03.04.2026 00:00"
+			}
+		},
+		{
+			"rowClasses": ["t1", "t2", "t3"],
+			"image": "https://info.monsterhunter.com/wilds/event-quest/thumbnail/mst-quest/September2025/BHL8yaUY29lKr9pIcThY.jpg",
+			"difficulty": "9★",
+			"onlineBadge": null,
+			"labels": [],
+			"title": "Be Cursed, Ye Shadowy Flame",
+			"eventTimeText": "10-22 00:00 〜 01-01 00:00",
+			"summary": "A powerful Arch-Tempered monster roams the Oilwell Basin. Earn special rewards and forge the Nu Udra γ armor set!",
+			"buttons": [],
+			"colabLink": null,
+			"overview": {
+				"Locales": "Oilwell Basin",
+				"Conditions": "HR 100 or higher",
+				"Completion Conditions": "Hunt the Arch-tempered Nu Udra",
+				"Start Date and Time": "10.22.2025 00:00"
+			}
+		},
+		{
+			"rowClasses": ["t1", "t2", "t3"],
+			"image": "https://info.monsterhunter.com/wilds/event-quest/thumbnail/mst-quest/September2025/6VNRkjVemkUw1HW2Ckpl.jpg",
+			"difficulty": "9★",
+			"onlineBadge": null,
+			"labels": ["Collaborations"],
+			"title": "Planetes Protocol (Savage)",
+			"eventTimeText": "09-29 00:00 〜 01-01 00:00",
+			"summary": "Take on the tougher-than-ever Omega Planetes and gather special materials to obtain the Omega Attire α armor set.Note: Due to this quest's high difficulty, multiplayer play is recommended.",
+			"buttons": [],
+			"colabLink": "https://info.monsterhunter.com/wilds/collabo/en-us/ff14/",
+			"overview": {
+				"Locales": "Rimechain Peak",
+				"Conditions": "HR 100 or higher",
+				"Completion Conditions": "Slay the Omega Planetes",
+				"Start Date and Time": "09.29.2025 00:00"
+			}
+		},
+		{
+			"rowClasses": ["t1", "t2", "t3"],
+			"image": "https://info.monsterhunter.com/wilds/event-quest/thumbnail/mst-quest/September2025/tt0AkaKfSBEZ7up009Ni.jpg",
+			"difficulty": "9★",
+			"onlineBadge": null,
+			"labels": [],
+			"title": "Ultimate Berserker",
+			"eventTimeText": "02-18 00:00 〜 01-01 00:00",
+			"summary": "Take on a 9★-equivalent Guardian Fulgur Anjanath to obtain the Glowing Stone appraisal item!",
+			"buttons": [],
+			"colabLink": null,
+			"overview": {
+				"Locales": "Ruins of Wyveria",
+				"Conditions": "HR 100 or higher",
+				"Completion Conditions": "Hunt the Tempered Guardian Fulgur Anjanath",
+				"Start Date and Time": "02.18.2026 00:00"
+			}
+		},
+		{
+			"rowClasses": ["t1", "t2", "t3"],
+			"image": "https://info.monsterhunter.com/wilds/event-quest/thumbnail/mst-quest/September2025/2Y5C48kqrUUGFOuYIJZ1.jpg",
+			"difficulty": "9★",
+			"onlineBadge": null,
+			"labels": [],
+			"title": "The White Wonder",
+			"eventTimeText": "02-18 00:00 〜 01-01 00:00",
+			"summary": "Take on a 9★-equivalent Blangonga to obtain the Glowing Stone appraisal item!",
+			"buttons": [],
+			"colabLink": null,
+			"overview": {
+				"Locales": "Iceshard Cliffs",
+				"Conditions": "HR 100 or higher",
+				"Completion Conditions": "Hunt the Tempered Blangonga",
+				"Start Date and Time": "02.18.2026 00:00"
+			}
+		},
+		{
+			"rowClasses": ["t1", "t2", "t3"],
+			"image": "https://info.monsterhunter.com/wilds/event-quest/thumbnail/mst-quest/September2025/CCH9KI7gIzNhFODEMio1.jpg",
+			"difficulty": "9★",
+			"onlineBadge": null,
+			"labels": [],
+			"title": "The Monkey King",
+			"eventTimeText": "02-18 00:00 〜 01-01 00:00",
+			"summary": "Take on a 9★-equivalent Ajarakan to obtain the Glowing Stone appraisal item!",
+			"buttons": [],
+			"colabLink": null,
+			"overview": {
+				"Locales": "Oilwell Basin",
+				"Conditions": "HR 100 or higher",
+				"Completion Conditions": "Hunt the Tempered Ajarakan",
+				"Start Date and Time": "02.18.2026 00:00"
+			}
+		},
+		{
+			"rowClasses": ["t1", "t2", "t3"],
+			"image": "https://info.monsterhunter.com/wilds/event-quest/thumbnail/mst-quest/December2025/ePWse5hzjtHy9zUNaReV.jpg",
+			"difficulty": "9★",
+			"onlineBadge": null,
+			"labels": [],
+			"title": "Heart of Judecca",
+			"eventTimeText": "12-24 00:00 〜 01-01 00:00",
+			"summary": "A powerful Arch-Tempered monster roams the Rimechain Peak. Earn special rewards and forge the Dahaad γ armor set!",
+			"buttons": [],
+			"colabLink": null,
+			"overview": {
+				"Locales": "Rimechain Peak",
+				"Conditions": "HR 100 or higher",
+				"Completion Conditions": "Slay the Arch-tempered Jin Dahaad",
+				"Start Date and Time": "12.24.2025 00:00"
+			}
+		},
+		{
+			"rowClasses": ["t1", "t2", "t3"],
+			"image": "https://info.monsterhunter.com/wilds/event-quest/thumbnail/mst-quest/December2025/wvtAhxVpMavg3QpCTkXU.jpg",
+			"difficulty": "9★",
+			"onlineBadge": null,
+			"labels": [],
+			"title": "Specter of Their Sins",
+			"eventTimeText": "12-16 00:00 〜 01-01 00:00",
+			"summary": "Take on the fearsome Gogmazios! Complete this quest to obtain Mutated Armaments that can be used to forge Gogma Artian Weapons!",
+			"buttons": [],
+			"colabLink": null,
+			"overview": {
+				"Locales": "Forgotten Machineworks",
+				"Conditions": "HR 100 or higher",
+				"Completion Conditions": "Slay the Gogmazios",
+				"Start Date and Time": "12.16.2025 00:00"
+			}
+		},
+		{
+			"rowClasses": ["t1", "t2", "t3"],
+			"image": "https://info.monsterhunter.com/wilds/event-quest/thumbnail/mst-quest/December2025/dkgRdXyOkZiYGAmVti9C.jpg",
+			"difficulty": "9★",
+			"onlineBadge": null,
+			"labels": [],
+			"title": "There Goes the Neighborhood",
+			"eventTimeText": "02-18 00:00 〜 01-01 00:00",
+			"summary": "Take on a 9★-equivalent Yian Kut-Ku to obtain the Glowing Stone appraisal item!",
+			"buttons": [],
+			"colabLink": null,
+			"overview": {
+				"Locales": "Scarlet Forest",
+				"Conditions": "HR 100 or higher",
+				"Completion Conditions": "Hunt the Tempered Yian Kut-Ku",
+				"Start Date and Time": "02.18.2026 00:00"
+			}
+		},
+		{
+			"rowClasses": ["t1", "t2", "t3"],
+			"image": "https://info.monsterhunter.com/wilds/event-quest/thumbnail/mst-quest/December2025/VLMOK7XSLrLmyFiYt4Dl.jpg",
+			"difficulty": "9★",
+			"onlineBadge": null,
+			"labels": [],
+			"title": "Sovereign Brute",
+			"eventTimeText": "02-11 00:00 〜 01-01 00:00",
+			"summary": "Take on a 9★-equivalent Doshaguma to obtain the Glowing Stone appraisal item!",
+			"buttons": [],
+			"colabLink": null,
+			"overview": {
+				"Locales": "Windward Plains",
+				"Conditions": "HR 100 or higher",
+				"Completion Conditions": "Hunt the Tempered Doshaguma",
+				"Start Date and Time": "02.11.2026 00:00"
+			}
+		},
+		{
+			"rowClasses": ["t1", "t2", "t3"],
+			"image": "https://info.monsterhunter.com/wilds/event-quest/thumbnail/mst-quest/March2025/Whd4ez6DgENAgdr2hx7X.jpg",
+			"difficulty": "8★",
+			"onlineBadge": null,
+			"labels": [],
+			"title": "A Silent Flash",
+			"eventTimeText": "07-23 00:00 〜 01-01 00:00",
+			"summary": "A powerful Arch-Tempered monster roams the Windward Plains. Earn special rewards and forge the Rey Dau γ armor set!",
+			"buttons": [],
+			"colabLink": null,
+			"overview": {
+				"Locales": "Windward Plains",
+				"Conditions": "HR 50 or higher",
+				"Completion Conditions": "Hunt the Arch-tempered Rey Dau",
+				"Start Date and Time": "07.23.2025 00:00"
+			}
+		},
+		{
+			"rowClasses": ["t1", "t2", "t3"],
+			"image": "https://info.monsterhunter.com/wilds/event-quest/thumbnail/mst-quest/June2025/BXRFzpAgWAPutaUx2nxE.jpg",
+			"difficulty": "8★",
+			"onlineBadge": null,
+			"labels": [],
+			"title": "These Roots Run Deep",
+			"eventTimeText": "07-23 00:00 〜 01-01 00:00",
+			"summary": "A powerful Arch-Tempered monster roams the Scarlet Forest. Earn special rewards and forge the Uth Duna γ armor set!",
+			"buttons": [],
+			"colabLink": null,
+			"overview": {
+				"Locales": "Scarlet Forest",
+				"Conditions": "HR 50 or higher",
+				"Completion Conditions": "Hunt the Arch-tempered Uth Duna",
+				"Start Date and Time": "07.23.2025 00:00"
+			}
+		},
+		{
+			"rowClasses": ["t1", "t2", "t3"],
+			"image": "https://info.monsterhunter.com/wilds/event-quest/thumbnail/mst-quest/July2025/HlSkF3rFTxi159iAmz0G.jpg",
+			"difficulty": "8★",
+			"onlineBadge": null,
+			"labels": [],
+			"title": "Hungry for Ore?",
+			"eventTimeText": "02-18 00:00 〜 01-01 00:00",
+			"summary": "Gather special materials and obtain the Mad Scavenger Pickaxe and Mining Pickaxe weapons!",
+			"buttons": [],
+			"colabLink": null,
+			"overview": {
+				"Locales": "Wounded Hollow",
+				"Conditions": "HR 41 or higher",
+				"Completion Conditions": "Hunt 2 Tempered Gravios",
+				"Start Date and Time": "02.18.2026 00:00"
+			}
+		},
+		{
+			"rowClasses": ["t1", "t2", "t3"],
+			"image": "https://info.monsterhunter.com/wilds/event-quest/thumbnail/mst-quest/September2025/q2QBWJVwFjy22zC9Aql2.jpg",
+			"difficulty": "8★",
+			"onlineBadge": null,
+			"labels": [],
+			"title": "Frenzy or Be Frenzied Upon",
+			"eventTimeText": "02-18 00:00 〜 01-01 00:00",
+			"summary": "Gather special materials and obtain the fearsome Skull Mask α head armor!",
+			"buttons": [],
+			"colabLink": null,
+			"overview": {
+				"Locales": "Wounded Hollow",
+				"Conditions": "HR 41 or higher",
+				"Completion Conditions": "Hunt all target monsters",
+				"Start Date and Time": "02.18.2026 00:00"
+			}
+		},
+		{
+			"rowClasses": ["t1", "t2", "t3"],
+			"image": "https://info.monsterhunter.com/wilds/event-quest/thumbnail/mst-quest/September2025/NAVZq76zWvTrCL7ABtNh.jpg",
+			"difficulty": "8★",
+			"onlineBadge": null,
+			"labels": [],
+			"title": "Meat at the Heart of Wyveria",
+			"eventTimeText": "02-18 00:00 〜 01-01 00:00",
+			"summary": "Gather special materials and obtain the dual blades weapon: Tasty Blades!Note: The Well-done Steak Strap can be earned on first completion.",
+			"buttons": [],
+			"colabLink": null,
+			"overview": {
+				"Locales": "Ruins of Wyveria",
+				"Conditions": "HR 41 or higher",
+				"Completion Conditions": "Hunt all target monsters",
+				"Start Date and Time": "02.18.2026 00:00"
+			}
+		},
+		{
+			"rowClasses": ["t1", "t2", "t3"],
+			"image": "https://info.monsterhunter.com/wilds/event-quest/thumbnail/mst-quest/September2025/wpvtslZ8D8iFckjQsoXi.jpg",
+			"difficulty": "8★",
+			"onlineBadge": null,
+			"labels": [],
+			"title": "That Won't Faze Me!",
+			"eventTimeText": "02-18 00:00 〜 01-01 00:00",
+			"summary": "Gather special materials and earn the Gelidron α armor as well as new glasses for Alma and your hunter!Note: Alma outfit customization is unlocked after completing a certain side mission.",
+			"buttons": [],
+			"colabLink": null,
+			"overview": {
+				"Locales": "Oilwell Basin",
+				"Conditions": "HR 41 or higher",
+				"Completion Conditions": "Hunt the Tempered Gypceros",
+				"Start Date and Time": "02.18.2026 00:00"
+			}
+		},
+		{
+			"rowClasses": ["t1", "t2", "t3"],
+			"image": "https://info.monsterhunter.com/wilds/event-quest/thumbnail/mst-quest/September2025/ce1LfKOnxLmKkavd8hOg.jpg",
+			"difficulty": "8★",
+			"onlineBadge": null,
+			"labels": [],
+			"title": "Masterless Claws",
+			"eventTimeText": "10-22 00:00 〜 01-01 00:00",
+			"summary": "An event quest for obtaining Ancient Weapon Fragments you can use to forge Artian weapons!",
+			"buttons": [],
+			"colabLink": null,
+			"overview": {
+				"Locales": "Ruins of Wyveria",
+				"Conditions": "HR 41 or higher",
+				"Completion Conditions": "Hunt the Tempered Guardian Ebony Odogaron",
+				"Start Date and Time": "10.22.2025 00:00"
+			}
+		},
+		{
+			"rowClasses": ["t1", "t2", "t3"],
+			"image": "https://info.monsterhunter.com/wilds/event-quest/thumbnail/mst-quest/December2025/ycIoSu5wJv5uFOCTJsb5.jpg",
+			"difficulty": "8★",
+			"onlineBadge": null,
+			"labels": [],
+			"title": "The Snow Has Teeth",
+			"eventTimeText": "02-18 00:00 〜 01-01 00:00",
+			"summary": "Gather special materials and obtain the Orion α armor set and Felyne Snowcat α Palico equipment!",
+			"buttons": [],
+			"colabLink": null,
+			"overview": {
+				"Locales": "Wounded Hollow",
+				"Conditions": "HR 41 or higher",
+				"Completion Conditions": "Hunt 3 Tempered Blangonga",
+				"Start Date and Time": "02.18.2026 00:00"
+			}
+		},
+		{
+			"rowClasses": ["t1", "t2", "t3"],
+			"image": "https://info.monsterhunter.com/wilds/event-quest/thumbnail/mst-quest/December2025/MZQDQXVhcX33Oi581vOE.jpg",
+			"difficulty": "8★",
+			"onlineBadge": null,
+			"labels": [],
+			"title": "Playing the Long Game",
+			"eventTimeText": "02-18 00:00 〜 01-01 00:00",
+			"summary": "Gather special materials and earn the Eager Wudwud α headgear so you can explore the wilds with an additional furry friend!",
+			"buttons": [],
+			"colabLink": null,
+			"overview": {
+				"Locales": "Wounded Hollow",
+				"Conditions": "HR 41 or higher",
+				"Completion Conditions": "Hunt all target monsters",
+				"Start Date and Time": "02.18.2026 00:00"
+			}
+		},
+		{
+			"rowClasses": ["t1", "t2", "t3"],
+			"image": "https://info.monsterhunter.com/wilds/event-quest/thumbnail/mst-quest/December2025/P68TLjo4zVcT0iZdxvQC.jpg",
+			"difficulty": "8★",
+			"onlineBadge": null,
+			"labels": [],
+			"title": "Lalas and Toads and Bears, Oh My!",
+			"eventTimeText": "02-18 00:00 〜 01-01 00:00",
+			"summary": "Gather special materials and obtain a Sword & Shield favored by playful Lynians, the Catspaw, and Thief α Palico equipment!",
+			"buttons": [],
+			"colabLink": null,
+			"overview": {
+				"Locales": "Scarlet Forest",
+				"Conditions": "HR 41 or higher",
+				"Completion Conditions": "Hunt all target monsters",
+				"Start Date and Time": "02.18.2026 00:00"
+			}
+		},
+		{
+			"rowClasses": ["t1", "t2", "t3"],
+			"image": "https://info.monsterhunter.com/wilds/event-quest/thumbnail/mst-quest/December2025/pnLymTrgHRgfOPnikFrw.jpg",
+			"difficulty": "8★",
+			"onlineBadge": null,
+			"labels": [],
+			"title": "It's Darker than You Think",
+			"eventTimeText": "02-18 00:00 〜 01-01 00:00",
+			"summary": "Gather special materials and earn equipment like the Analytic E.Y.E. α head armor as well as new glasses for Alma and your hunter!Note: Alma outfit customization requires completion of a specific side mission.",
+			"buttons": [],
+			"colabLink": null,
+			"overview": {
+				"Locales": "Ruins of Wyveria",
+				"Conditions": "HR 41 or higher",
+				"Completion Conditions": "Hunt all target monsters",
+				"Start Date and Time": "02.18.2026 00:00"
+			}
+		},
+		{
+			"rowClasses": ["t1", "t2", "t3"],
+			"image": "https://info.monsterhunter.com/wilds/event-quest/thumbnail/mst-quest/February2026/UvV0UnrCoLwVWi94256T.jpg",
+			"difficulty": "8★",
+			"onlineBadge": null,
+			"labels": [],
+			"title": "Razzle Dazzle Frazzle",
+			"eventTimeText": "02-28 00:00 〜 01-01 00:00",
+			"summary": "Gather special materials and obtain the Gala Suit α armor set and Felyne Star α Palico equipment!",
+			"buttons": [],
+			"colabLink": null,
+			"overview": {
+				"Locales": "Wounded Hollow",
+				"Conditions": "HR 41 or higher",
+				"Completion Conditions": "Hunt all target monsters",
+				"Start Date and Time": "02.28.2026 00:00"
+			}
+		},
+		{
+			"rowClasses": ["t1", "t2", "t3"],
+			"image": "https://info.monsterhunter.com/wilds/event-quest/thumbnail/mst-quest/February2026/XIBpM2DkNIQ2xo2EH0nS.jpg",
+			"difficulty": "8★",
+			"onlineBadge": null,
+			"labels": ["Collaborations"],
+			"title": "A Flash of Brilliance",
+			"eventTimeText": "03-04 00:00 〜 01-01 00:00",
+			"summary": "Gather special materials and obtain the Azure Star Blade long sword, the Azure Age α armor set, and the F Azure Era α Palico equipment!",
+			"buttons": [],
+			"colabLink": "https://www.monsterhunter.com/wilds/en-us/topics/collabo-usj/",
+			"overview": {
+				"Locales": "Wounded Hollow",
+				"Conditions": "HR 41 or higher",
+				"Completion Conditions": "Hunt all target monsters",
+				"Start Date and Time": "03.04.2026 00:00"
+			}
+		},
+		{
+			"rowClasses": ["t1", "t2", "t3"],
+			"image": "https://info.monsterhunter.com/wilds/event-quest/thumbnail/mst-quest/February2026/UtoYxrmIMH0tF8vembCA.jpg",
+			"difficulty": "8★",
+			"onlineBadge": null,
+			"labels": [],
+			"title": "Every Hunter's Dream",
+			"eventTimeText": "02-18 00:00 〜 01-01 00:00",
+			"summary": "Collect special materials and obtain the Shatterseal great sword, the Grand Prize-winning design from the Weapon Design Contest.Players completing the quest for the first time will be rewarded with the Meatmergency! pendant, the Grand Prize-winning design from the Pendant Design Contest.",
+			"buttons": [],
+			"colabLink": null,
+			"overview": {
+				"Locales": "Wounded Hollow",
+				"Conditions": "HR 41 or higher",
+				"Completion Conditions": "Hunt all target monsters",
+				"Start Date and Time": "02.18.2026 00:00"
+			}
+		},
+		{
+			"rowClasses": ["t1", "t2", "t3"],
+			"image": "https://info.monsterhunter.com/wilds/event-quest/thumbnail/mst-quest/December2025/BME2A3bDLcvUlpxonlTo.jpg",
+			"difficulty": "7★",
+			"onlineBadge": null,
+			"labels": [],
+			"title": "Endless Sky, Endless Sea",
+			"eventTimeText": "12-16 00:00 〜 01-01 00:00",
+			"summary": "An event quest for gathering Heavy Armor Spheres for upgrading your armor!",
+			"buttons": [],
+			"colabLink": null,
+			"overview": {
+				"Locales": "Wounded Hollow",
+				"Conditions": "HR 41 or higher",
+				"Completion Conditions": "Hunt all target monsters",
+				"Start Date and Time": "12.16.2025 00:00"
+			}
+		},
+		{
+			"rowClasses": ["t1", "t2", "t3"],
+			"image": "https://info.monsterhunter.com/wilds/event-quest/thumbnail/mst-quest/March2025/lftoP85Two9DumBmjGRb.jpg",
+			"difficulty": "6★",
+			"onlineBadge": null,
+			"labels": [],
+			"title": "That Won't Work on Me!",
+			"eventTimeText": "02-18 00:00 〜 01-01 00:00",
+			"summary": "Gather special materials and earn headgear like the Sealed Eyepatch α as well as an outfit for Alma!Note: Alma outfit customization requires completion of a specific side mission.",
+			"buttons": [],
+			"colabLink": null,
+			"overview": {
+				"Locales": "Ruins of Wyveria",
+				"Conditions": "HR 31 or higher",
+				"Completion Conditions": "Hunt the Tempered Xu Wu",
+				"Start Date and Time": "02.18.2026 00:00"
+			}
+		},
+		{
+			"rowClasses": ["t1", "t2", "t3"],
+			"image": "https://info.monsterhunter.com/wilds/event-quest/thumbnail/mst-quest/March2025/MSc9YaOo7SOZDl0rvs3S.jpg",
+			"difficulty": "6★",
+			"onlineBadge": null,
+			"labels": [],
+			"title": "King of a Faraway Sky",
+			"eventTimeText": "10-22 00:00 〜 01-01 00:00",
+			"summary": "An event quest for obtaining Artian materials you can use to forge Artian weapons!",
+			"buttons": [],
+			"colabLink": null,
+			"overview": {
+				"Locales": "Ruins of Wyveria",
+				"Conditions": "HR 31 or higher",
+				"Completion Conditions": "Hunt the Tempered Guardian Rathalos",
+				"Start Date and Time": "10.22.2025 00:00"
+			}
+		},
+		{
+			"rowClasses": ["t1", "t2", "t3"],
+			"image": "https://info.monsterhunter.com/wilds/event-quest/thumbnail/mst-quest/June2025/t2rzrIQ86ORCbKpuESJ2.jpg",
+			"difficulty": "6★",
+			"onlineBadge": null,
+			"labels": [],
+			"title": "An Inferno Laid Bare",
+			"eventTimeText": "02-18 00:00 〜 01-01 00:00",
+			"summary": "Gather special materials and obtain the Pinion Necklace α chest armor and Felyne Bell Collar α Palico body armor!",
+			"buttons": [],
+			"colabLink": null,
+			"overview": {
+				"Locales": "Oilwell Basin",
+				"Conditions": "HR 31 or higher",
+				"Completion Conditions": "Hunt the Nu Udra",
+				"Start Date and Time": "02.18.2026 00:00"
+			}
+		},
+		{
+			"rowClasses": ["t1", "t2", "t3"],
+			"image": "https://info.monsterhunter.com/wilds/event-quest/thumbnail/mst-quest/July2025/4hGIsIseCYLLOSFVzdrq.jpg",
+			"difficulty": "6★",
+			"onlineBadge": null,
+			"labels": [],
+			"title": "Wreaking Havoc in Wyveria",
+			"eventTimeText": "09-29 00:00 〜 01-01 00:00",
+			"summary": "An event quest for gathering Hard Armor Spheres for upgrading your armor!",
+			"buttons": [],
+			"colabLink": null,
+			"overview": {
+				"Locales": "Ruins of Wyveria",
+				"Conditions": "HR 31 or higher",
+				"Completion Conditions": "Hunt the Tempered Guardian Fulgur Anjanath",
+				"Start Date and Time": "09.29.2025 00:00"
+			}
+		},
+		{
+			"rowClasses": ["t1", "t2", "t3"],
+			"image": "https://info.monsterhunter.com/wilds/event-quest/thumbnail/mst-quest/July2025/zjZZUe5s9YNEAlr90z0g.jpg",
+			"difficulty": "6★",
+			"onlineBadge": null,
+			"labels": [],
+			"title": "Shining Blades against the Dull Wasteland",
+			"eventTimeText": "02-18 00:00 〜 01-01 00:00",
+			"summary": "An event quest for earning a large amount of weapon decorations!",
+			"buttons": [],
+			"colabLink": null,
+			"overview": {
+				"Locales": "Windward Plains",
+				"Conditions": "HR 31 or higher",
+				"Completion Conditions": "Hunt the Seregios",
+				"Start Date and Time": "02.18.2026 00:00"
+			}
+		},
+		{
+			"rowClasses": ["t1", "t2", "t3"],
+			"image": "https://info.monsterhunter.com/wilds/event-quest/thumbnail/mst-quest/July2025/fSn6I3vkZIISlIaLu0Yv.jpg",
+			"difficulty": "6★",
+			"onlineBadge": null,
+			"labels": [],
+			"title": "No More Mister Ice Guy",
+			"eventTimeText": "02-18 00:00 〜 01-01 00:00",
+			"summary": "An event quest for earning a large amount of defensive decorations!",
+			"buttons": [],
+			"colabLink": null,
+			"overview": {
+				"Locales": "Iceshard Cliffs",
+				"Conditions": "HR 31 or higher",
+				"Completion Conditions": "Hunt the Tempered Blangonga",
+				"Start Date and Time": "02.18.2026 00:00"
+			}
+		},
+		{
+			"rowClasses": ["t1", "t2", "t3"],
+			"image": "https://info.monsterhunter.com/wilds/event-quest/thumbnail/mst-quest/July2025/WcQ1YhW9LC5ScGnn1XPQ.jpg",
+			"difficulty": "6★",
+			"onlineBadge": null,
+			"labels": [],
+			"title": "Eldrich Enigma",
+			"eventTimeText": "02-11 00:00 〜 01-01 00:00",
+			"summary": "An event quest for earning tons of Hunter Rank Points! This is a great chance to raise your Hunter Rank!",
+			"buttons": [],
+			"colabLink": null,
+			"overview": {
+				"Locales": "Wounded Hollow",
+				"Conditions": "HR 31 or higher",
+				"Completion Conditions": "Hunt the Tempered Xu Wu",
+				"Start Date and Time": "02.11.2026 00:00"
+			}
+		},
+		{
+			"rowClasses": ["t1", "t2", "t3"],
+			"image": "https://info.monsterhunter.com/wilds/event-quest/thumbnail/mst-quest/July2025/wbPqpJB1iRwDN4ycc9Ub.jpg",
+			"difficulty": "6★",
+			"onlineBadge": null,
+			"labels": [],
+			"title": "The Claws Are Out",
+			"eventTimeText": "02-18 00:00 〜 01-01 00:00",
+			"summary": "Gather special materials and obtain the paw-some Toe Bean Mittens α!",
+			"buttons": [],
+			"colabLink": null,
+			"overview": {
+				"Locales": "Ruins of Wyveria",
+				"Conditions": "HR 31 or higher",
+				"Completion Conditions": "Hunt the Tempered Guardian Ebony Odogaron",
+				"Start Date and Time": "02.18.2026 00:00"
+			}
+		},
+		{
+			"rowClasses": ["t1", "t2", "t3"],
+			"image": "https://info.monsterhunter.com/wilds/event-quest/thumbnail/mst-quest/February2025/QspWOCV1Td0H8nMO6009.jpg",
+			"difficulty": "5★",
+			"onlineBadge": null,
+			"labels": [],
+			"title": "Tongue-Tied",
+			"eventTimeText": "09-29 00:00 〜 01-01 00:00",
+			"summary": "An event quest for gathering Hard Armor Spheres and Advanced Armor Spheres for upgrading your armor!",
+			"buttons": [],
+			"colabLink": null,
+			"overview": {
+				"Locales": "Windward Plains",
+				"Conditions": "HR 21 or higher",
+				"Completion Conditions": "Hunt the Tempered Chatacabra",
+				"Start Date and Time": "09.29.2025 00:00"
+			}
+		},
+		{
+			"rowClasses": ["t1", "t2", "t3"],
+			"image": "https://info.monsterhunter.com/wilds/event-quest/thumbnail/mst-quest/February2025/G1CM1k94LpGV5C7v4vwp.jpg",
+			"difficulty": "5★",
+			"onlineBadge": null,
+			"labels": [],
+			"title": "Ballet in the Rain",
+			"eventTimeText": "02-18 00:00 〜 01-01 00:00",
+			"summary": "An event quest for gathering Glowing Orb - Swords to use as decorations for customizing your weapon skills!",
+			"buttons": [],
+			"colabLink": null,
+			"overview": {
+				"Locales": "Scarlet Forest",
+				"Conditions": "HR 21 or higher",
+				"Completion Conditions": "Hunt the Tempered Lala Barina",
+				"Start Date and Time": "02.18.2026 00:00"
+			}
+		},
+		{
+			"rowClasses": ["t1", "t2", "t3"],
+			"image": "https://info.monsterhunter.com/wilds/event-quest/thumbnail/mst-quest/February2025/tzOMg5CCDyLMTyG0EFUX.jpg",
+			"difficulty": "5★",
+			"onlineBadge": null,
+			"labels": [],
+			"title": "Sand-Scarred Soul",
+			"eventTimeText": "02-18 00:00 〜 01-01 00:00",
+			"summary": "An event quest for gathering Glowing Orb - Armors to use as decorations for customizing your armor skills!",
+			"buttons": [],
+			"colabLink": null,
+			"overview": {
+				"Locales": "Windward Plains",
+				"Conditions": "HR 9 or higher",
+				"Completion Conditions": "Hunt the Doshaguma",
+				"Start Date and Time": "02.18.2026 00:00"
+			}
+		},
+		{
+			"rowClasses": ["t1", "t2", "t3"],
+			"image": "https://info.monsterhunter.com/wilds/event-quest/thumbnail/mst-quest/April2025/MB8FC3hBoxbdeJSVxXMS.jpg",
+			"difficulty": "5★",
+			"onlineBadge": null,
+			"labels": [],
+			"title": "Running Wild",
+			"eventTimeText": "02-18 00:00 〜 01-01 00:00",
+			"summary": "Gather special materials and obtain Sealed Dragon Cloth α headgear!",
+			"buttons": [],
+			"colabLink": null,
+			"overview": {
+				"Locales": "Ruins of Wyveria",
+				"Conditions": "HR 21 or higher",
+				"Completion Conditions": "Hunt the Guardian Fulgur Anjanath",
+				"Start Date and Time": "02.18.2026 00:00"
+			}
+		},
+		{
+			"rowClasses": ["t1", "t2", "t3"],
+			"image": "https://info.monsterhunter.com/wilds/event-quest/thumbnail/mst-quest/March2025/vNmUchi6CdSw4wzNiF6E.jpg",
+			"difficulty": "5★",
+			"onlineBadge": null,
+			"labels": [],
+			"title": "Anguish and Atrocity",
+			"eventTimeText": "02-11 00:00 〜 01-01 00:00",
+			"summary": "An event quest for earning tons of Hunter Rank Points! This is a great chance to raise your Hunter Rank!",
+			"buttons": [],
+			"colabLink": null,
+			"overview": {
+				"Locales": "Ruins of Wyveria",
+				"Conditions": "HR 21 or higher",
+				"Completion Conditions": "Hunt the Guardian Doshaguma",
+				"Start Date and Time": "02.11.2026 00:00"
+			}
+		},
+		{
+			"rowClasses": ["t1", "t2", "t3"],
+			"image": "https://info.monsterhunter.com/wilds/event-quest/thumbnail/mst-quest/May2025/20ZUIFuHGtduQeIe55mR.jpg",
+			"difficulty": "5★",
+			"onlineBadge": null,
+			"labels": [],
+			"title": "Kut-Ku the Forest Conqueror",
+			"eventTimeText": "02-18 00:00 〜 01-01 00:00",
+			"summary": "Gather special materials and earn the big cool Wudwud Guise α Palico equipment set and more!",
+			"buttons": [],
+			"colabLink": null,
+			"overview": {
+				"Locales": "Scarlet Forest",
+				"Conditions": "HR 21 or higher",
+				"Completion Conditions": "Hunt the Tempered Yian Kut-Ku",
+				"Start Date and Time": "02.18.2026 00:00"
+			}
+		},
+		{
+			"rowClasses": ["t1", "t2", "t3"],
+			"image": "https://info.monsterhunter.com/wilds/event-quest/thumbnail/mst-quest/July2025/jSLhcXi8qrlzpvLZx5Gs.jpg",
+			"difficulty": "5★",
+			"onlineBadge": null,
+			"labels": [],
+			"title": "A Vile Visage",
+			"eventTimeText": "02-18 00:00 〜 01-01 00:00",
+			"summary": "Gather special materials and obtain the fearsome Doshagumask α head armor!",
+			"buttons": [],
+			"colabLink": null,
+			"overview": {
+				"Locales": "Windward Plains",
+				"Conditions": "HR 9 or higher",
+				"Completion Conditions": "Capture the Alpha Doshaguma",
+				"Start Date and Time": "02.18.2026 00:00"
+			}
+		},
+		{
+			"rowClasses": ["t1", "t2", "t3"],
+			"image": "https://info.monsterhunter.com/wilds/event-quest/thumbnail/mst-quest/June2025/FE9dGmSlVn8TnW8JbrOX.jpg",
+			"difficulty": "5★",
+			"onlineBadge": null,
+			"labels": [],
+			"title": "Putting Up a Stink",
+			"eventTimeText": "02-18 00:00 〜 01-01 00:00",
+			"summary": "Gather special materials and earn the Cornpopper weapon as well as an outfit for Alma!Note: Alma outfit customization requires completion of a specific side mission.",
+			"buttons": [],
+			"colabLink": null,
+			"overview": {
+				"Locales": "Scarlet Forest",
+				"Conditions": "HR 21 or higher",
+				"Completion Conditions": "Hunt all target monsters",
+				"Start Date and Time": "02.18.2026 00:00"
+			}
+		},
+		{
+			"rowClasses": ["t1", "t2", "t3"],
+			"image": "https://info.monsterhunter.com/wilds/event-quest/thumbnail/mst-quest/July2025/rLcrDugFcplIvIX7qnK4.jpg",
+			"difficulty": "5★",
+			"onlineBadge": null,
+			"labels": ["Collaborations"],
+			"title": "The Melodic Monarch",
+			"eventTimeText": "02-18 00:00 〜 01-01 00:00",
+			"summary": "Complete this quest and earn a rockin' guitar gesture!Note: Gesture can be earned on first completion.",
+			"buttons": [],
+			"colabLink": "https://www.monsterhunter.com/wilds/en-us/topics/collabo-fender/",
+			"overview": {
+				"Locales": "Wounded Hollow",
+				"Conditions": "HR 16 or higher",
+				"Completion Conditions": "Hunt the Rathalos",
+				"Start Date and Time": "02.18.2026 00:00"
+			}
+		},
+		{
+			"rowClasses": ["t1", "t2", "t3"],
+			"image": "https://info.monsterhunter.com/wilds/event-quest/thumbnail/mst-quest/September2025/6NhiAGtQEOIJixsLnXfE.jpg",
+			"difficulty": "5★",
+			"onlineBadge": null,
+			"labels": [],
+			"title": "Congalala Courting Carols",
+			"eventTimeText": "02-18 00:00 〜 01-01 00:00",
+			"summary": "Gather special materials and obtain the Felyne Hymstrigian α Palico equipment!",
+			"buttons": [],
+			"colabLink": null,
+			"overview": {
+				"Locales": "Scarlet Forest",
+				"Conditions": "HR 21 or higher",
+				"Completion Conditions": "Hunt all target monsters",
+				"Start Date and Time": "02.18.2026 00:00"
+			}
+		},
+		{
+			"rowClasses": ["t1", "t2", "t3"],
+			"image": "https://info.monsterhunter.com/wilds/event-quest/thumbnail/mst-quest/February2025/S1UoFL9Xcn6vfmYjMQGh.jpg",
+			"difficulty": "4★",
+			"onlineBadge": null,
+			"labels": [],
+			"title": "Kut-Ku Gone Cuckoo",
+			"eventTimeText": "02-18 00:00 〜 01-01 00:00",
+			"summary": "Gather special materials to obtain the Mimiphyta α headgear!",
+			"buttons": [],
+			"colabLink": null,
+			"overview": {
+				"Locales": "Scarlet Forest",
+				"Conditions": "HR 9 or higher",
+				"Completion Conditions": "Hunt the Yian Kut-Ku",
+				"Start Date and Time": "02.18.2026 00:00"
+			}
+		},
+		{
+			"rowClasses": ["t1", "t2", "t3"],
+			"image": "https://info.monsterhunter.com/wilds/event-quest/thumbnail/mst-quest/February2025/jTIYyLJ0dG9BUFKrM51Y.jpg",
+			"difficulty": "4★",
+			"onlineBadge": null,
+			"labels": [],
+			"title": "Like a Fire Hidden by Sand",
+			"eventTimeText": "02-18 00:00 〜 01-01 00:00",
+			"summary": "Gather special material to obtain the Expedition Headgear α, a piece of equipment based on the emblem of the expedition!",
+			"buttons": [],
+			"colabLink": null,
+			"overview": {
+				"Locales": "Windward Plains",
+				"Conditions": "HR 9 or higher",
+				"Completion Conditions": "Hunt the Rathian",
+				"Start Date and Time": "02.18.2026 00:00"
+			}
+		},
+		{
+			"rowClasses": ["t1", "t2", "t3"],
+			"image": "https://info.monsterhunter.com/wilds/event-quest/thumbnail/mst-quest/March2025/IgUnKPoWjPBxep4mQjSa.jpg",
+			"difficulty": "4★",
+			"onlineBadge": null,
+			"labels": [],
+			"title": "When Do Quematrice Sing?",
+			"eventTimeText": "02-18 00:00 〜 01-01 00:00",
+			"summary": "Gather special materials and obtain cute headgear: Amstrigian α!",
+			"buttons": [],
+			"colabLink": null,
+			"overview": {
+				"Locales": "Windward Plains",
+				"Conditions": "HR 9 or higher",
+				"Completion Conditions": "Hunt the Quematrice",
+				"Start Date and Time": "02.18.2026 00:00"
+			}
+		},
+		{
+			"rowClasses": ["t1", "t2", "t3"],
+			"image": "https://info.monsterhunter.com/wilds/event-quest/thumbnail/mst-quest/March2025/x3O9H7a8nJnms4So86Cc.jpg",
+			"difficulty": "4★",
+			"onlineBadge": null,
+			"labels": [],
+			"title": "Daughters of Carabosse",
+			"eventTimeText": "02-18 00:00 〜 01-01 00:00",
+			"summary": "Gather special materials and obtain the Blossom α armor set and Felyne Butterfly α Palico equipment!",
+			"buttons": [],
+			"colabLink": null,
+			"overview": {
+				"Locales": "Wounded Hollow",
+				"Conditions": "HR 16 or higher",
+				"Completion Conditions": "Hunt 2 Lala Barina",
+				"Start Date and Time": "02.18.2026 00:00"
+			}
+		},
+		{
+			"rowClasses": ["t1", "t2", "t3"],
+			"image": "https://info.monsterhunter.com/wilds/event-quest/thumbnail/mst-quest/May2025/CRiI4dVqN25U12TZIf86.jpg",
+			"difficulty": "4★",
+			"onlineBadge": null,
+			"labels": [],
+			"title": "Three Tails Better Than None",
+			"eventTimeText": "02-18 00:00 〜 01-01 00:00",
+			"summary": "Gather special materials and earn the paw-some Faux Felyne α headgear!",
+			"buttons": [],
+			"colabLink": null,
+			"overview": {
+				"Locales": "Wounded Hollow",
+				"Conditions": "HR 16 or higher",
+				"Completion Conditions": "Hunt 3 Quematrice",
+				"Start Date and Time": "02.18.2026 00:00"
+			}
+		},
+		{
+			"rowClasses": ["t1", "t2", "t3"],
+			"image": "https://info.monsterhunter.com/wilds/event-quest/thumbnail/mst-quest/June2025/eMzRl5HnrEeliVEMbrBU.jpg",
+			"difficulty": "4★",
+			"onlineBadge": null,
+			"labels": [],
+			"title": "Pick Your Poison",
+			"eventTimeText": "02-18 00:00 〜 01-01 00:00",
+			"summary": "Gather special materials and obtain the Diver α armor set and Felyne Aloha Set α Palico equipment!",
+			"buttons": [],
+			"colabLink": null,
+			"overview": {
+				"Locales": "Oilwell Basin",
+				"Conditions": "HR 9 or higher",
+				"Completion Conditions": "Hunt all target monsters",
+				"Start Date and Time": "02.18.2026 00:00"
+			}
+		},
+		{
+			"rowClasses": ["t1", "t2", "t3"],
+			"image": "https://info.monsterhunter.com/wilds/event-quest/thumbnail/mst-quest/September2025/j2i54HaMt6SD512T9xxT.jpg",
+			"difficulty": "4★",
+			"onlineBadge": null,
+			"labels": [],
+			"title": "Hirabami Harvest",
+			"eventTimeText": "02-18 00:00 〜 01-01 00:00",
+			"summary": "Gather special materials and obtain the Harvest α armor set and Felyne Ghost α Palico equipment!",
+			"buttons": [],
+			"colabLink": null,
+			"overview": {
+				"Locales": "Iceshard Cliffs",
+				"Conditions": "HR 9 or higher",
+				"Completion Conditions": "Hunt 3 Hirabami",
+				"Start Date and Time": "02.18.2026 00:00"
+			}
+		},
+		{
+			"rowClasses": ["t1", "t2", "t3"],
+			"image": "https://info.monsterhunter.com/wilds/event-quest/thumbnail/mst-quest/February2026/h6ZVLECg80oPlCvTqkuv.jpg",
+			"difficulty": "4★",
+			"onlineBadge": null,
+			"labels": [],
+			"title": "Neon Neopterons",
+			"eventTimeText": "02-25 00:00 〜 01-01 00:00",
+			"summary": "Complete this quest to receive special pendants.Note: Each time you complete the quest, you will receive a pendant. A total of seven different pendants can be obtained.",
+			"buttons": [],
+			"colabLink": null,
+			"overview": {
+				"Locales": "Wounded Hollow",
+				"Conditions": "HR 16 or higher",
+				"Completion Conditions": "Slay 15 ?????",
+				"Start Date and Time": "02.25.2026 00:00"
+			}
+		},
+		{
+			"rowClasses": ["t1", "t2", "t3"],
+			"image": "https://info.monsterhunter.com/wilds/event-quest/thumbnail/mst-quest/March2025/ceEjYilX69CkE8CSF3ta.jpg",
+			"difficulty": "2★",
+			"onlineBadge": null,
+			"labels": [],
+			"title": "Chemicus Nocturnus",
+			"eventTimeText": "09-29 00:00 〜 01-01 00:00",
+			"summary": "An event for gathering Firestone and other materials you can use to forge equipment!",
+			"buttons": [],
+			"colabLink": null,
+			"overview": {
+				"Locales": "Oilwell Basin",
+				"Conditions": "HR 3 or higher",
+				"Completion Conditions": "Hunt the Rompopolo",
+				"Start Date and Time": "09.29.2025 00:00"
+			}
+		},
+		{
+			"rowClasses": ["t1", "t2", "t3"],
+			"image": "https://info.monsterhunter.com/wilds/event-quest/thumbnail/mst-quest/March2025/MB93fBJeFaBYD1NsD3Oy.jpg",
+			"difficulty": "1★",
+			"onlineBadge": null,
+			"labels": [],
+			"title": "Careening Out of Control",
+			"eventTimeText": "09-29 00:00 〜 01-01 00:00",
+			"summary": "An event quest for gathering Armor Spheres and Armor Sphere+ items for upgrading your armor!",
+			"buttons": [],
+			"colabLink": null,
+			"overview": {
+				"Locales": "Windward Plains",
+				"Conditions": "HR 2 or higher",
+				"Completion Conditions": "Hunt the Balahara",
+				"Start Date and Time": "09.29.2025 00:00"
+			}
+		}
+	]
+}

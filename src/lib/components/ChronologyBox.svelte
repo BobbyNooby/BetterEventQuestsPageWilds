@@ -1,12 +1,19 @@
 <script lang="ts">
+	import { browser } from '$app/environment';
 	import type { Quest } from '$lib/types';
 	import { parseISOToCurrentTimezone } from '$lib/utils';
+	import type { Chronology } from '$lib/utils';
 	import TimeLeft from './TimeLeft.svelte';
 
 	let {
 		quest,
-		chronology
-	}: { quest: Quest; chronology: 'past' | 'current' | 'future' | 'permanent' } = $props();
+		chronology,
+		compact = false
+	}: {
+		quest: Quest;
+		chronology: Chronology;
+		compact?: boolean;
+	} = $props();
 
 	const labelMap = {
 		past: { text: 'Ended', classes: 'bg-purple-600 text-white border-purple-800' },
@@ -25,7 +32,9 @@
 
 <!-- Colored  box -->
 <div
-	class={`w-full rounded-lg border-4 px-2.5 py-1 text-center text-xl font-semibold tracking-wide uppercase ${labelMap[chronology].classes}`}
+	class={`w-full rounded-lg border px-2.5 text-center font-semibold tracking-wide uppercase ${
+		compact ? 'border-2 py-1 text-xs' : 'border-4 py-1 text-xl'
+	} ${labelMap[chronology].classes}`}
 	aria-live="polite"
 >
 	<span>
@@ -34,14 +43,17 @@
 
 	<!-- Timer BELOW the label, hidden for permanent -->
 	{#if chronology !== 'permanent'}
-		<div class="mt-1 font-mono text-lg tabular-nums">
+		<div class={`mt-1 font-mono tabular-nums ${compact ? 'text-sm' : 'text-lg'}`}>
 			<TimeLeft
 				start={new Date()}
 				end={utcAccordingToChronology ? new Date(utcAccordingToChronology) : null}
 			/>
 		</div>
-		<div class="mt-1 font-mono text-xs tabular-nums">
-			<span>{parseISOToCurrentTimezone(utcAccordingToChronology)}</span>
-		</div>
+		<!-- local-TZ date string: client-only, so SSR never bakes in server-TZ text -->
+		{#if browser && utcAccordingToChronology}
+			<div class={`mt-1 font-mono tabular-nums ${compact ? 'text-[10px]' : 'text-xs'}`}>
+				<span>{parseISOToCurrentTimezone(utcAccordingToChronology)}</span>
+			</div>
+		{/if}
 	{/if}
 </div>

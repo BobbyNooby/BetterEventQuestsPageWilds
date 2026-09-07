@@ -1,1 +1,1 @@
-export const maxDifficulty = 8;
+export const maxDifficulty = 10;

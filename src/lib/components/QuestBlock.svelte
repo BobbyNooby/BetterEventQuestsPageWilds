@@ -1,108 +1,151 @@
 <script lang="ts">
+	import { browser } from '$app/environment';
 	import type { Quest } from '$lib/types';
-	import { parseISOToCurrentTimezone } from '$lib/utils';
+	import { parseISOToCurrentTimezone, questChronology, questDifficulty } from '$lib/utils';
 	import ChronologyBox from './ChronologyBox.svelte';
 	import DifficultyRing from './DifficultyRing.svelte';
 
 	let { quest }: { quest: Quest } = $props();
 
-	const chronology: 'past' | 'current' | 'future' | 'permanent' = (() => {
-		const s = quest.startISOUTC ? new Date(quest.startISOUTC) : null;
-		const e = quest.endISOUTC ? new Date(quest.endISOUTC) : null;
-		const now = new Date();
-		if (!s || !e) return 'permanent';
-		if (now < s) return 'future';
-		if (now > e) return 'past';
-		return 'current';
-	})();
+	const chronology = $derived(questChronology(quest));
+	const diff = $derived(questDifficulty(quest));
+	const isCollab = $derived(
+		!!quest.collabUrl || (quest.labels ?? []).some((l) => l.toLowerCase().includes('collab'))
+	);
 
-	const diff = Number((quest.difficulty ?? '').toString().replace(/[^\d]/g, '')) || 0;
+	// Pointer-tracking 3D tilt + enlarge. Fine pointers only (no touch), and
+	// off entirely when the user prefers reduced motion.
+	let tilt = $state({ rx: 0, ry: 0, active: false });
+	const canTilt =
+		typeof window !== 'undefined' &&
+		window.matchMedia('(pointer: fine)').matches &&
+		!window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+	const onMove = (e: PointerEvent) => {
+		if (!canTilt) return;
+		const el = e.currentTarget as HTMLElement;
+		const r = el.getBoundingClientRect();
+		const px = (e.clientX - r.left) / r.width - 0.5;
+		const py = (e.clientY - r.top) / r.height - 0.5;
+		tilt = { rx: -py * 8, ry: px * 10, active: true };
+	};
+	const onLeave = () => {
+		tilt = { rx: 0, ry: 0, active: false };
+	};
+
+	const hrText = $derived((quest.conditions ?? '').match(/HR\s*\d+\s*or higher/i)?.[0] ?? null);
 </script>
 
-<div
-	class="mx-auto w-full max-w-6xl rounded-xl border-4 border-white bg-black shadow-md ring-1 shadow-white"
->
-	<!-- Grid:
-	     mobile: 1 col
-	     md+:   12 cols
-	     time rail (md: col-span-2), image (md: 5), summary (md: 5), details wraps under summary on small -->
-	<div class="grid grid-cols-1 gap-4 p-3 md:grid-cols-12 md:gap-6 md:p-6">
-		<!-- Time rail (mobile: top full width; desktop: left column) -->
-		<div
-			class="order-1 flex h-fit w-full flex-col items-start gap-1 md:order-1 md:col-span-2 md:items-center"
-		>
-			<ChronologyBox {quest} {chronology} />
-			{#if chronology == 'future'}
-				<ChronologyBox {quest} chronology={'current'} />
-			{/if}
-		</div>
-
-		<!-- Image -->
-		<div
-			class="order-2 overflow-hidden rounded-lg border-2 border-gray-300 shadow md:order-2 md:col-span-5"
-		>
+<div class="group h-full [perspective:1100px]">
+	<div
+		class={`flex h-full flex-col overflow-hidden rounded-2xl border-2 border-white bg-black shadow-lg transition-[transform,box-shadow] ease-out will-change-transform ${
+			tilt.active ? 'duration-75' : 'duration-300'
+		} group-hover:shadow-[0_0_35px_rgba(255,255,255,0.28)]`}
+		style={`transform: perspective(1000px) rotateX(${tilt.rx}deg) rotateY(${tilt.ry}deg) scale(${
+			tilt.active ? 1.04 : 1
+		});`}
+		onpointermove={onMove}
+		onpointerleave={onLeave}
+	>
+		<!-- Thumbnail -->
+		<div class="relative shrink-0 overflow-hidden border-b-2 border-white">
 			{#if quest.image}
 				<div class="aspect-[16/9] w-full">
 					<img
-						class="h-full w-full object-cover"
+						class="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"
 						src={quest.image}
 						alt={quest.title}
 						loading="lazy"
 						decoding="async"
 					/>
 				</div>
+			{:else}
+				<div class="aspect-[16/9] w-full bg-neutral-900"></div>
 			{/if}
-		</div>
 
-		<!-- Summary + title + ring -->
-		<section class="order-3 md:order-2 md:col-span-5">
-			<header class="mb-3 flex items-center gap-3">
-				<h1 class="flex-1 text-lg leading-tight font-semibold text-white md:text-xl">
-					{quest.title}
-				</h1>
-
-				<!-- Difficulty ring: scale down on small screens -->
-				<div class="shrink-0 origin-center scale-90 md:scale-100">
-					<DifficultyRing value={diff} size={72} thickness={10} gapDeg={8} />
-				</div>
-			</header>
-
-			{#if quest.summary}
-				<p class="text-sm leading-relaxed text-gray-300 md:text-base">
-					{quest.summary}
-				</p>
-			{/if}
-		</section>
-
-		<!-- Details: on mobile it spans full width below; on desktop align right -->
-		<aside class="order-4 md:order-3 md:col-span-12">
+			<!-- legibility gradient -->
 			<div
-				class="mt-2 grid grid-cols-1 gap-y-1 rounded-lg border border-gray-200 p-3 text-sm text-gray-300 sm:grid-cols-2 md:grid-cols-4"
-			>
-				{#if quest.locales}
-					<p><span class="font-semibold">Locale</span> : {quest.locales}</p>
+				class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"
+			></div>
+
+			<!-- top-left badges -->
+			<div class="absolute top-2 left-2 flex flex-wrap gap-1">
+				{#if isCollab}
+					<span
+						class="rounded border-2 border-fuchsia-300 bg-fuchsia-600 px-1.5 py-0.5 text-[10px] font-bold tracking-wider text-white uppercase"
+					>
+						Collab
+					</span>
 				{/if}
-				{#if quest.conditions}
-					<p><span class="font-semibold">Conditions</span> : {quest.conditions}</p>
+				{#if quest.onlineOnly}
+					<span
+						class="rounded border-2 border-sky-300 bg-sky-600 px-1.5 py-0.5 text-[10px] font-bold tracking-wider text-white uppercase"
+					>
+						Online only
+					</span>
 				{/if}
-				{#if quest.completionConditions}
-					<p>
-						<span class="font-semibold">Completion</span> : {quest.completionConditions}
-					</p>
-				{/if}
-				{#if quest.startISOUTC}
-					<p>
-						<span class="font-semibold">Start</span> : {parseISOToCurrentTimezone(
-							quest.startISOUTC
-						)}
-					</p>
-				{/if}
-				{#if quest.endISOUTC}
-					<p>
-						<span class="font-semibold">End</span> : {parseISOToCurrentTimezone(quest.endISOUTC)}
-					</p>
+				{#if quest.isNew}
+					<span
+						class="rounded border-2 border-yellow-200 bg-yellow-400 px-1.5 py-0.5 text-[10px] font-bold tracking-wider text-black uppercase"
+					>
+						New
+					</span>
 				{/if}
 			</div>
-		</aside>
+
+			<!-- title + difficulty on the gradient -->
+			<div class="absolute bottom-0 left-0 flex w-full items-end gap-2 p-3">
+				<h2 class="flex-1 text-lg leading-tight font-bold text-white drop-shadow md:text-xl">
+					{quest.title}
+				</h2>
+				<div class="shrink-0 drop-shadow">
+					<DifficultyRing value={diff} size={56} thickness={8} gapDeg={8} />
+				</div>
+			</div>
+		</div>
+
+		<!-- Body -->
+		<div class="flex flex-1 flex-col gap-3 p-4">
+			{#if quest.summary}
+				<p class="line-clamp-3 text-sm leading-relaxed text-gray-300">{quest.summary}</p>
+			{/if}
+
+			<div class="flex flex-wrap gap-1.5 text-xs">
+				{#if quest.locales}
+					<span class="rounded-full border border-white/60 px-2 py-0.5 text-gray-200">
+						{quest.locales}
+					</span>
+				{/if}
+				{#if hrText}
+					<span class="rounded-full border border-white/60 px-2 py-0.5 text-gray-200">
+						{hrText}
+					</span>
+				{/if}
+			</div>
+
+			{#if quest.completionConditions}
+				<p class="line-clamp-2 text-xs leading-relaxed text-gray-400">
+					<span class="font-semibold text-gray-300">Completion:</span>
+					{quest.completionConditions}
+				</p>
+			{/if}
+
+			<!-- local-TZ date strings: client-only, so SSR never bakes in server-TZ text -->
+			{#if browser}
+				<p class="text-[11px] text-gray-500">
+					{#if quest.startISOUTC}
+						From {parseISOToCurrentTimezone(quest.startISOUTC)}
+					{/if}
+					{#if quest.endISOUTC}
+						· until {parseISOToCurrentTimezone(quest.endISOUTC)}
+					{/if}
+				</p>
+			{/if}
+
+			<!-- status/countdown pinned to the bottom -->
+			<div class="mt-auto pt-1">
+				<ChronologyBox {quest} {chronology} compact />
+			</div>
+		</div>
 	</div>
 </div>

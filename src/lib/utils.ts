@@ -41,3 +41,33 @@ export const parseISOToCurrentTimezone = (iso: string | null | undefined): strin
 
 	return `${day}.${month}.${year} ${hours}:${minutes}`;
 };
+
+// ---- shared quest helpers (used by the page filters and the card) ----
+
+export type Chronology = 'past' | 'current' | 'future' | 'permanent';
+
+export type QuestLike = {
+	startISOUTC?: string | null;
+	endISOUTC?: string | null;
+	difficulty?: string | null;
+	conditions?: string | null;
+};
+
+export const questChronology = (q: QuestLike): Chronology => {
+	const s = q.startISOUTC ? new Date(q.startISOUTC) : null;
+	const e = q.endISOUTC ? new Date(q.endISOUTC) : null;
+	if (!s || !e) return 'permanent';
+	const now = Date.now();
+	if (now < s.getTime()) return 'future';
+	if (now > e.getTime()) return 'past';
+	return 'current';
+};
+
+export const questDifficulty = (q: QuestLike): number =>
+	Number((q.difficulty ?? '').replace(/[^\d]/g, '')) || 0;
+
+/** "HR 31 or higher" -> 31; null when no HR requirement is stated */
+export const questHr = (q: QuestLike): number | null => {
+	const m = (q.conditions ?? '').match(/HR\s*(\d+)/i);
+	return m ? parseInt(m[1], 10) : null;
+};

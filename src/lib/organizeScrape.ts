@@ -1,5 +1,6 @@
 // npm i cheerio
 import * as cheerio from 'cheerio';
+import type { Element } from 'domhandler';
 import type { Quest } from './types';
 import { getDateFromString } from './utils';
 
@@ -24,21 +25,55 @@ export const organizeScrape = (rawHTML: string): ScrapeResult => {
 	const timezoneUTCOffset = $('#time_diff').attr('value') ?? null;
 
 	// helpers
-	const text = (el: cheerio.Cheerio) => el.text().trim() || null;
+	const text = (el: cheerio.Cheerio<Element>) => el.text().trim() || null;
+	// `$()` is typed as Cheerio<AnyNode>; the areas we select are element tables
+	const asElement = (sel: string) => $(sel) as unknown as cheerio.Cheerio<Element>;
+
+	/**
+	 * "Hunt the Tempered Guardian Fulgur Anjanath" → ["Guardian Fulgur Anjanath"]
+	 * "Slay the Omega Planetes" → ["Omega Planetes"]
+	 * Generic rows like "Hunt all target monsters" → []
+	 */
+	const extractMonsters = (completion: string | null): string[] => {
+		if (!completion) return [];
+		const generic = /^(all\s+)?(targets?|target monsters?|aggressors?)$/i;
+		return [
+			...new Set(
+				completion
+					.replace(/^(hunt|slay|capture|defeat)\s+(all|both|the|a|an)\s+/i, '')
+					.split(/\s+and\s+|\s*,\s*/i)
+					.map((part) =>
+						part
+							.replace(/^(the|a|an)\s+/i, '')
+							.replace(/^(tempered|arch-tempered|arch tempered|alpha|apex|guardian)\s+/i, '')
+							.replace(/\s+/g, ' ')
+							.trim()
+					)
+					.filter((m) => m.length > 2 && !generic.test(m) && !/target/i.test(m))
+			)
+		];
+	};
 
 	const toISOorNull = (s: string | null): string | null => {
 		const d = getDateFromString(s, { tzOffsetHours: 0 }); // assume source is UTC=0
 		return isNaN(d.getTime()) ? null : d.toISOString();
 	};
 
-	const readQuestRow = (tr: cheerio.Element): Quest => {
+	const readQuestRow = (tr: Element): Quest => {
 		const row = $(tr);
 		const img = row.find('td.image img').attr('src') ?? null;
 		const difficulty = text(row.find('td.level span')) || null;
 
 		const titleWrap = row.find('td.quest .title');
 		const isNew = titleWrap.find('.label_style.label_new').length > 0;
+		const labels = titleWrap
+			.find('.label_style')
+			.map((_, el) => $(el).text().trim())
+			.get();
 		const title = text(titleWrap.find('> span')) ?? '';
+
+		const collabUrl = row.find('li.btn.colab a').attr('href') ?? null;
+		const onlineOnly = row.find('.online_offline__icon img').length > 0;
 
 		const eventTimeText =
 			text(row.find('td.quest p.terms'))?.replace(/^Event Time\s*/i, '') ?? null;
@@ -76,12 +111,17 @@ export const organizeScrape = (rawHTML: string): ScrapeResult => {
 		// NEW: normalized ISO UTC
 		const startISOUTC = toISOorNull(startDateTime);
 		const endISOUTC = toISOorNull(endDateTime);
+		const monsters = extractMonsters(completionConditions);
 
 		return {
 			title,
 			difficulty,
 			image: img,
 			isNew,
+			labels,
+			collabUrl,
+			onlineOnly,
+			monsters,
 			eventTimeText,
 			summary,
 			locales,
@@ -94,10 +134,12 @@ export const organizeScrape = (rawHTML: string): ScrapeResult => {
 		};
 	};
 
-	const readTable = (root: cheerio.Cheerio): Quest[] => {
+	const readTable = (root: cheerio.Cheerio<Element>): Quest[] => {
 		const rows = root.find('table.table2 > tbody > tr');
 		const quests: Quest[] = [];
-		rows.each((_, tr) => quests.push(readQuestRow(tr)));
+		rows.each((_, tr) => {
+			quests.push(readQuestRow(tr));
+		});
 		return quests;
 	};
 
@@ -111,7 +153,7 @@ export const organizeScrape = (rawHTML: string): ScrapeResult => {
 		const rangeText = p.replace(/<br.*/i, '').trim();
 		const label = $(li).find('span').last().text().trim();
 
-		const tableArea = $(`#${id}.tableArea1`);
+		const tableArea = asElement(`#${id}.tableArea1`);
 		const quests = tableArea.length ? readTable(tableArea) : [];
 
 		limitedTime.push({
@@ -123,7 +165,7 @@ export const organizeScrape = (rawHTML: string): ScrapeResult => {
 	});
 
 	// Permanent
-	const permanentRoot = $('section.permanent_box .tableArea2');
+	const permanentRoot = asElement('section.permanent_box .tableArea2');
 	const permanent = permanentRoot.length ? readTable(permanentRoot) : [];
 
 	return {

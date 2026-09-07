@@ -50,7 +50,7 @@
 	aria-label={`Difficulty ${value} of ${max}`}
 	role="img"
 >
-	{#each Array(max) as _, i}
+	{#each [...Array(max).keys()] as i (i)}
 		{@const s = i * step + gapDeg / 2}
 		{@const e = (i + 1) * step - gapDeg / 2}
 		<path

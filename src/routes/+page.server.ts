@@ -1,23 +1,19 @@
-// SvelteKit load that runs on the server
+// SvelteKit load that runs on the server.
+// Quests come from SQLite (written by the weekly refresh) — Capcom is
+// only hit when the DB is empty or predates the current weekly slot.
+import { ensureFresh } from '$lib/server/refresh';
+import { getActiveQuests, getLastScrapedAt } from '$lib/server/db';
+
 export const load = async () => {
-	const url = 'https://info.monsterhunter.com/wilds/event-quest/en-us/schedule?utc=0';
-	const res = await fetch(url, {
-		// Some sites block “botty” defaults — send a standard UA/Accept set
-		headers: {
-			'user-agent':
-				'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
-			accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-			'accept-language': 'en-US,en;q=0.9'
-		},
-		redirect: 'follow'
-	});
-	if (!res.ok) {
-		const body = await res.text().catch(() => '');
-		return {
-			status: res.status,
-			html: `Request failed: ${res.status} ${res.statusText}\n${body.slice(0, 1000)}`
-		};
+	try {
+		await ensureFresh('page-load');
+	} catch {
+		// refresh failed — serve whatever the DB has (error is recorded in `runs`)
 	}
-	const html = await res.text();
-	return { status: 200, html };
+
+	return {
+		status: 200,
+		quests: getActiveQuests(),
+		lastScrapedAt: getLastScrapedAt()
+	};
 };
