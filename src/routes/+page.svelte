@@ -95,14 +95,56 @@
 	});
 </script>
 
+<svelte:head>
+	<title>Better Event Quests | Monster Hunter Wilds</title>
+	<meta
+		name="description"
+		content="A better, filterable view of Monster Hunter Wilds event quests — updated weekly."
+	/>
+</svelte:head>
+
 <div id="background" class="min-h-screen bg-black">
 	<div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
 		<header class="py-8 sm:py-10">
-			<h1
-				class="text-center text-3xl font-extrabold tracking-tight text-white sm:text-4xl md:text-5xl"
-			>
-				Better Event Quests Page
-			</h1>
+			<div class="flex items-center justify-center gap-4 sm:gap-5">
+				<!-- claw mark -->
+				<svg viewBox="0 0 64 64" class="h-14 w-14 shrink-0 sm:h-20 sm:w-20" aria-hidden="true">
+					<rect width="64" height="64" rx="14" fill="#0a0a0a" />
+					<rect
+						x="2.5"
+						y="2.5"
+						width="59"
+						height="59"
+						rx="12"
+						fill="none"
+						stroke="#ffffff"
+						stroke-opacity="0.9"
+						stroke-width="3"
+					/>
+					<g transform="rotate(-18 32 32)">
+						<path d="M17 12 C 22 24, 21 40, 14 52 C 24 42, 27 24, 24 12 Z" fill="#ffffff" />
+						<path d="M30 8 C 36 22, 35 42, 27 56 C 38 44, 41 22, 37 8 Z" fill="#ff5a36" />
+						<path d="M44 12 C 49 24, 48 40, 41 52 C 51 42, 54 24, 51 12 Z" fill="#ffffff" />
+					</g>
+				</svg>
+				<div>
+					<p
+						class="font-mono text-[10px] font-bold tracking-[0.35em] text-orange-400 uppercase sm:text-xs"
+					>
+						Monster Hunter Wilds
+					</p>
+					<h1
+						class="text-3xl font-extrabold tracking-tight text-white italic sm:text-4xl md:text-5xl"
+					>
+						Better Event Quests
+					</h1>
+					<p
+						class="mt-1 font-mono text-[9px] tracking-[0.25em] text-gray-500 uppercase sm:text-[10px]"
+					>
+						unofficial · fan-made · updates weekly
+					</p>
+				</div>
+			</div>
 		</header>
 
 		<FilterBar

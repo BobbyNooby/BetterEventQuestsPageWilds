@@ -2,6 +2,12 @@
 FROM oven/bun:1 AS build
 WORKDIR /app
 
+# better-sqlite3 falls back to node-gyp when no prebuilt binary matches,
+# which needs python3/make/g++ (not shipped in the slim bun image)
+RUN apt-get update \
+	&& apt-get install -y --no-install-recommends python3 make g++ \
+	&& rm -rf /var/lib/apt/lists/*
+
 COPY package.json bun.lockb ./
 RUN bun install --frozen-lockfile
 
